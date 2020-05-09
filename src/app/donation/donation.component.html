@@ -1,0 +1,60 @@
+<div id="donation-form" class="text-center">
+<h1>How can you help.</h1>
+<h3>What is the basic necessity of a human being? Roti, Kapda aur Makaan</h3>
+<p>These migrating workers need food, shelter and clothing.</p>
+<p>You can donate these basic comodities to them.</p>
+</div>
+<div class="container">
+    <div class='card'>
+      <div class='card-header'>
+        <ul class="nav nav-pills card-header-pills">
+          <li class="nav-item">
+        <h3 class="navbar-brand">Lets help!</h3>
+        </li>
+        <li class="nav-item" style="margin-left: 45rem;">
+        <button class='btn btn-primary' style="background-color: #563d7c;" [routerLink]="['/home']">Back</button>
+      </li>
+      </ul>
+      </div>
+    <div class="card-body">
+  <form #form="ngForm">
+      <div class="container">
+      <div class="form-group row">
+      <label class="col-md-4" for="fname">Name : </label>
+      <input class="form-control col-md-2" type="text" id="fname" name="fname" [(ngModel)]='name' required>
+      </div>
+      <div class="form-group row">
+      <label class="col-md-4" for="address">Address: </label>
+      <input class="form-control col-md-2" type="text" id="address" name="Address" [(ngModel)]='address'required>
+      </div>
+      <div class="form-group row">
+      <label class="col-md-4" for="email">Email: </label>
+      <input class="form-control col-md-2" type="email" id="email" name="email" [(ngModel)]='emailid' required pattern="[^ @]*@[^ @]*"
+      #email="ngModel">
+      <div class="alert-danger" *ngIf="email.errors && (email.dirty || email.touched)" style="padding:2px;">
+            <span *ngIf="email.errors.required">Email is required</span>
+            <span *ngIf="email.errors.pattern">Email formate is not valid</span>
+          </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4" for="dtype">Donation Type</label>
+        <select class="form-control col-md-2" id="dtype" name="Dtype" [(ngModel)]='type' required>
+          <option value="food">FOOD</option>
+          <option value="clothing">CLOTHING</option>
+          <option value="shelter">SHELTER</option>
+          <option value="meds">MEDICINES</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+      <div class="form-group row">
+      <label class="col-md-4" for="conatct">Conatact number:</label>
+      <input class="form-control col-md-2" type="number" id="conatct" name="Contact" [(ngModel)]='contact' required>
+      </div>
+  
+      <input [disabled]="!form.valid" class='btn btn-primary' type="button" value="Donate" style="background-color: #563d7c;" (click)='add()'>
+      </div>
+    </form>
+  </div>
+  </div>
+    </div>
+    <p>{{form.value | json}}</p>
