@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['/home']">Anna Daata</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['/donation']">Donate</a>
+            <a class="nav-item nav-link" href="#">About</a>
+        </div>
+    </div>
+</nav>
+<div class="router-wrapper">
+    <router-outlet></router-outlet>
+</div>
+<div style="color:white;background-color: #292c31;text-align:center;padding:20px 50px;text-align: justify;">
+    <p style="text-align:center;">Copyright © 2019 <br /> Janak Poojary</p>
+</div>

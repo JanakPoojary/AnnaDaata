@@ -1,0 +1,10 @@
+.router-wrapper{
+width: 100%;
+}
+.nav-item{
+    color:black;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

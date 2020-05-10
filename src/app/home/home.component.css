@@ -1,0 +1,44 @@
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+  }
+  #wrapper-body{
+      padding:1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color:#292c31;
+  }
+  #inside-wrapper{
+      color:white;
+      padding-top:8rem;
+  }
+  #heading-1{
+    font-family: 'Alfa Slab One', cursive;
+  }
+  #heading-hindi{
+    font-family: 'Rozha One', serif;
+    font-size: 6rem;
+  }
+  #wrapper::after {
+    content: "";
+    /* background: url("https://demo.joomdev.com/desire/toolbar/images/blog/full-img-3.jpg"); */
+    background: url("https://steemitimages.com/DQmaixZLeZGAbvCUCvB69QWdWHDtxMyNXFte4VKzWBaJrEZ/o-INDIAN-GIRLS-SMILING-facebook.jpg");
+    opacity: 0.9;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+  .quote{
+      color:white;
+      height:auto ;
+      background-color: #292c31;
+  }

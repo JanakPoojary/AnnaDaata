@@ -1,4 +1,8 @@
 #donation-form{
     padding: 1rem;
-    margin-bottom:1rem;
+    background: url("https://thebodyisnotanapology.com/wp-content/uploads/2015/05/Mountain-Slider-Web.jpg");
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

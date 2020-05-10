@@ -7,6 +7,8 @@ import { DonationComponent } from './donation/donation.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'donation', component: DonationComponent },
+  {path: '', redirectTo:'home', pathMatch:'full'},
+  {path:'*',redirectTo:'error',pathMatch:'full'}
 ];
 
 @NgModule({
