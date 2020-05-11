@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database'
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-donation',
   templateUrl: './donation.component.html',
@@ -12,14 +13,15 @@ export class DonationComponent implements OnInit {
   type:string;
   contact:number;
   emailid:string;
- items:Observable<any[]>;
-  constructor(public db: AngularFireDatabase) { 
-this.items= db.list('users').valueChanges();
+  desc:string;
+  date = new Date();
+  constructor(public db: AngularFireDatabase,private router: Router) { 
   }
 
   ngOnInit(): void {
   }
 add():void{
-  this.db.list('users').push({name: this.name, address: this.address, email: this.emailid, contact:this.contact, type:this.type })
+  this.db.list('users').push({name: this.name, address: this.address, email: this.emailid, contact:this.contact, type:this.type, description:this.desc, date:this.date.toISOString() });
+  this.router.navigate(['/doners']);
 }
 }

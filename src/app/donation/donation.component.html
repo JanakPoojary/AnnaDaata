@@ -1,6 +1,7 @@
 <div id="donation-form" class="text-center">
   <h1>How can you help?</h1>
-  <h3>Fill this form.</h3>
+  <p>Fill this form. Donation will be picked up from your doorsteps <br>to ensure social distancing and follow lockdown.
+  </p>
   <div class="container" style="background-color: #00000000;">
     <div class='card' style="background-color: #00000000;">
       <div class='card-header'>
@@ -9,7 +10,7 @@
             <h3 class="navbar-brand">Lets help!</h3>
           </li>
           <li class="nav-item" style="margin-left: 45rem;">
-            <button class='btn btn-primary' style="background-color: #563d7c;" [routerLink]="['/home']">Back</button>
+            <button class='btn btn-warning' [routerLink]="['/doners']">View Doners</button>
           </li>
         </ul>
       </div>
@@ -17,17 +18,17 @@
         <form #form="ngForm">
           <div class="container">
             <div class="form-group row">
-              <label class="col-md-4" for="fname">Name : </label>
-              <input class="form-control col-md-2" type="text" id="fname" name="fname" [(ngModel)]='name' required>
+              <label class="col-md-4" for="fname">Full Name : </label>
+              <input class="form-control col-md-3" type="text" id="fname" name="fname" [(ngModel)]='name' required>
             </div>
             <div class="form-group row">
-              <label class="col-md-4" for="address">Address: </label>
-              <input class="form-control col-md-2" type="text" id="address" name="Address" [(ngModel)]='address'
-                required>
+              <label class="col-md-4" for="address">Pick Up Address :<br><sub style="color:red;">Donation will be picked up from this location</sub> </label>
+              <textarea class="form-control col-md-3" id="address" rows="2" name="Address" [(ngModel)]='address'
+              required></textarea>
             </div>
             <div class="form-group row">
-              <label class="col-md-4" for="email">Email: </label>
-              <input class="form-control col-md-2" type="email" id="email" name="email" [(ngModel)]='emailid' required
+              <label class="col-md-4" for="email">Email : </label>
+              <input class="form-control col-md-3" type="email" id="email" name="email" [(ngModel)]='emailid' required
                 pattern="[^ @]*@[^ @]*" #email="ngModel">
               <div class="alert-danger" *ngIf="email.errors && (email.dirty || email.touched)" style="padding:2px;">
                 <span *ngIf="email.errors.required">Email is required</span>
@@ -35,29 +36,28 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4" for="dtype">Donation Type</label>
-              <select class="form-control col-md-2" id="dtype" name="Dtype" [(ngModel)]='type' required>
+              <label class="col-md-4" for="dtype">Donation Type :</label>
+              <select class="form-control col-md-3" id="dtype" name="Dtype" [(ngModel)]='type' required>
                 <option value="food">FOOD</option>
                 <option value="clothing">CLOTHING</option>
                 <option value="shelter">SHELTER</option>
-                <option value="meds">MEDICINES</option>
                 <option value="other">other</option>
               </select>
             </div>
             <div class="form-group row">
-              <label class="col-md-4" for="conatct">Conatact number:</label>
-              <input class="form-control col-md-2" type="number" id="conatct" name="Contact" [(ngModel)]='contact'
+              <label class="col-md-4" for="desc">Description of the donation :<br><sub style="color:red;">Quantity, Category related info<br>eg. 1 kg of rice, 10 plates meal,<br>2 shirt, 20 packets of Paracetamol etc</sub> </label>
+              <textarea class="form-control col-md-3" id="desc" rows="2" name="Description" [(ngModel)]='desc'
+              required></textarea>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4" for="conatct">Conatact number :<br><sub style="color:red;">We will contact you on this number<br>to fix the time slot for pickup</sub></label>
+              <input class="form-control col-md-3" type="number" id="conatct" name="Contact" [(ngModel)]='contact'
                 required>
             </div>
 
-            <input [disabled]="!form.valid" class='btn btn-primary' type="button" value="Donate"
-              style="background-color: #563d7c;" (click)='add();form.reset()'>
+            <input [disabled]="!form.valid" class='btn btn-warning' type="button" value="Donate" (click)='add();form.reset()'>
           </div>
         </form>
-      </div>
-      <div>
-        <p>hellefbfjh</p>
-        <pre *ngFor="let item of items | async">{{this.item.name}}</pre>
       </div>
     </div>
   </div>

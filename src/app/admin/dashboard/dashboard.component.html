@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="main-wrapper">
+        <div class='table-responsive'>
+            <table class='table' *ngIf='items'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Pickup Address</th>
+                        <th>Email-Id</th>
+                        <th>Donation type</th>
+                        <th>Description</th>
+                        <th>Contact Number</th>
+                        <th>Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let item of items | async'>
+                        <td>{{this.item.name}}</td>
+                        <td>{{this.item.address}}</td>
+                        <td>{{this.item.email}}</td>
+                        <td>{{this.item.type}}</td>
+                        <td>{{this.item.description}}</td>
+                        <td>{{this.item.contact}}</td>
+                        <td>{{this.item.date | date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

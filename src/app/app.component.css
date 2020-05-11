@@ -8,3 +8,10 @@ width: 100%;
     margin-left: 10px;
     margin-right: 10px;
 }
+.footer{
+    color:white;
+    background-color: #292c31;
+    text-align:center;
+    padding:20px 50px;
+    text-align: justify;
+}

@@ -8,12 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DonationComponent } from './donation/donation.component';
+import { DonersComponent } from './doners/doners.component';
+import { LoginComponent } from './admin/login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DonationComponent
+    DonationComponent,
+    DonersComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

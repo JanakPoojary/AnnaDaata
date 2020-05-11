@@ -7,13 +7,14 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" [routerLink]="['/donation']">Donate</a>
-            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" [routerLink]="['/doners']">Doners</a>
+            <a class="nav-item nav-link" [routerLink]="['/adminLogin']">Admin Dashboard</a>
         </div>
     </div>
 </nav>
 <div class="router-wrapper">
     <router-outlet></router-outlet>
 </div>
-<div style="color:white;background-color: #292c31;text-align:center;padding:20px 50px;text-align: justify;">
+<div class="footer">
     <p style="text-align:center;">Copyright © 2019 <br /> Janak Poojary</p>
 </div>
