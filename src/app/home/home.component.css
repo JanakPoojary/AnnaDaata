@@ -1,25 +1,24 @@
 #wrapper {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: block;
     position: relative;
   }
   #wrapper-body{
       padding:1rem;
       font-size: 1.2rem;
-      font-weight: 600;
       color:#292c31;
   }
   #inside-wrapper{
+      padding-top: 6rem;
       color:white;
-      padding-top:8rem;
   }
   #heading-1{
     font-family: 'Alfa Slab One', cursive;
   }
   #heading-hindi{
     font-family: 'Rozha One', serif;
-    font-size: 6rem;
+    font-size: 5rem;
   }
   #wrapper::after {
     content: "";
@@ -37,8 +36,4 @@
     position: absolute;
     z-index: -1;   
   }
-  .quote{
-      color:white;
-      height:auto ;
-      background-color: #292c31;
-  }
+  
