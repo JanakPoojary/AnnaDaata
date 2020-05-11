@@ -7,15 +7,15 @@
       <div class='card-header'>
         <ul class="nav nav-pills card-header-pills">
           <li class="nav-item">
-            <h3 class="navbar-brand">Lets help!</h3>
+            <button class='btn btn-warning bn' (click)="toggle()">{{title}}</button>
           </li>
-          <li class="nav-item" style="margin-left: 45rem;">
-            <button class='btn btn-warning' [routerLink]="['/doners']">View Doners</button>
+          <li class="nav-item">
+            <button class='btn btn-warning bn' [routerLink]="['/doners']">View Doners</button>
           </li>
         </ul>
       </div>
-      <div class="card-body">
-        <form #form="ngForm">
+      <div  class="card-body">
+        <form *ngIf="view" #form="ngForm">
           <div class="container">
             <div class="form-group row">
               <label class="col-md-4" for="fname">Full Name : </label>
